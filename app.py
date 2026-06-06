@@ -3,8 +3,7 @@ from flask import Flask, render_template_string
 
 app = Flask(__name__)
 
-# SE VOCÊ JÁ TIVER O LINK REAL DA KIWIFY, ALTERE O TEXTO ENTRE AS ASPAS ABAIXO.
-# SE NÃO TIVER, PODE DEIXAR COMO ESTÁ APENAS PARA FAZER O SITE VOLTAR AO AR!
+# Seu link real da Kiwify configurado corretamente
 LINK_DE_PAGAMENTO = "https://pay.kiwify.com.br/dTqsezY"
 
 # Modelo HTML estruturado com CSS integrado para a página de vendas
@@ -65,7 +64,7 @@ HTML_TEMPLATE = """
             <p><strong>Chega de encontros frustrantes. Está na hora de sintonizar com o amor da sua vida.</strong></p>
             <h1>Ativação da Atração de Alma Gêmea</h1>
             <p>Um método prático e espiritual para destravar seus bloqueios energéticos e atrair o parceiro ideal que já está alinhado com o seu propósito.</p>
-            <a href="{link_pagamento}" class="btn">QUERO ATIVAR MINHA ALMA GÊMEA AGORA</a>
+            <a href="LINK_SUBSTITUTO" class="btn">QUERO ATIVAR MINHA ALMA GÊMEA AGORA</a>
             <p class="sub-btn">🔒 Compra 100% segura | Acesso imediato</p>
         </div>
     </section>
@@ -111,7 +110,7 @@ HTML_TEMPLATE = """
                 <div class="preco">12x de R$ 29,70</div>
                 <p>ou R$ 297,00 à vista</p>
                 <br>
-                <a href="{link_pagamento}" class="btn">QUERO ME INSCREVER AGORA</a>
+                <a href="LINK_SUBSTITUTO" class="btn">QUERO ME INSCREVER AGORA</a>
                 
                 <div class="garantia">
                     <strong>🛡️ Risco Zero: Garantia de 7 Dias</strong><br>
@@ -127,7 +126,8 @@ HTML_TEMPLATE = """
 
 @app.route('/')
 def home():
-    html_renderizado = HTML_TEMPLATE.replace("{link_pagamento}", LINK_DE_PAGAMENTO)
+    # Substituição cirúrgica que evita qualquer quebra no servidor
+    html_renderizado = HTML_TEMPLATE.replace("LINK_SUBSTITUTO", LINK_DE_PAGAMENTO)
     return render_template_string(html_renderizado)
 
 if __name__ == '__main__':
