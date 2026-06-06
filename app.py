@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # SE VOCÊ JÁ TIVER O LINK REAL DA KIWIFY, ALTERE O TEXTO ENTRE AS ASPAS ABAIXO.
 # SE NÃO TIVER, PODE DEIXAR COMO ESTÁ APENAS PARA FAZER O SITE VOLTAR AO AR!
-LINK_DE_PAGAMENTO = "https://pay.kiwify.com.br/xyz123"
+LINK_DE_PAGAMENTO = "https://pay.kiwify.com.br/dTqsezY"
 
 # Modelo HTML estruturado com CSS integrado para a página de vendas
 HTML_TEMPLATE = """
