@@ -4,7 +4,7 @@ from flask import Flask, render_template_string
 app = Flask(__name__)
 
 # COLE O SEU LINK DE PAGAMENTO ENTRE AS ASPAS ABAIXO:
-LINK_DE_PAGAMENTO = "COLE_AQUI_O_SEU_LINK_DO_CHECKOUT_OU_CADASTRO"
+LINK_DE_PAGAMENTO = "https://pay.kiwify.com.br/xyz123"
 
 # Modelo HTML estruturado com CSS integrado para a página de vendas
 HTML_TEMPLATE = f"""
