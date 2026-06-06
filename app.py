@@ -3,7 +3,8 @@ from flask import Flask, render_template_string
 
 app = Flask(__name__)
 
-# SUBSTITUA O LINK ABAIXO PELO SEU LINK REAL DA KIWIFY QUANDO QUISER:
+# SE VOCÊ JÁ TIVER O LINK REAL DA KIWIFY, ALTERE O TEXTO ENTRE AS ASPAS ABAIXO.
+# SE NÃO TIVER, PODE DEIXAR COMO ESTÁ APENAS PARA FAZER O SITE VOLTAR AO AR!
 LINK_DE_PAGAMENTO = "https://pay.kiwify.com.br/xyz123"
 
 # Modelo HTML estruturado com CSS integrado para a página de vendas
@@ -14,7 +15,7 @@ HTML_TEMPLATE = """
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ativação da Atração de Alma Gêmea</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=300;400;600;700&family=Playfair+Display:ital,wght=0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #FFF5F5;
@@ -126,7 +127,6 @@ HTML_TEMPLATE = """
 
 @app.route('/')
 def home():
-    # Injeta a variável com segurança sem quebrar as chaves do CSS
     html_renderizado = HTML_TEMPLATE.replace("{link_pagamento}", LINK_DE_PAGAMENTO)
     return render_template_string(html_renderizado)
 
