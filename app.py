@@ -3,8 +3,8 @@ from flask import Flask, render_template_string
 
 app = Flask(__name__)
 
-# Seu link real da Kiwify configurado corretamente
-LINK_DE_PAGAMENTO = "https://pay.kiwify.com.br/dTqsezY"
+# Seu novo link real da Kiwify configurado corretamente
+LINK_DE_PAGAMENTO = "https://kiwify.app/eLE8Yyn"
 
 # Modelo HTML estruturado com CSS integrado para a página de vendas
 HTML_TEMPLATE = """
