@@ -3,7 +3,7 @@ from flask import Flask, render_template_string
 
 app = Flask(__name__)
 
-# Seu novo link real da Kiwify configurado corretamente
+# Seu novo link real da Kiwify com o preço atualizado para R$ 150,00
 LINK_DE_PAGAMENTO = "https://kiwify.app/eLE8Yyn"
 
 # Modelo HTML estruturado com CSS integrado para a página de vendas
@@ -107,8 +107,8 @@ HTML_TEMPLATE = """
             <h2>Chegou a sua hora de amar e ser amado(a)</h2>
             <div class="oferta">
                 <p>Todo o treinamento + Bônus Exclusivos por apenas:</p>
-                <div class="preco">12x de R$ 29,70</div>
-                <p>ou R$ 297,00 à vista</p>
+                <div class="preco">12x de R$ 15,00</div>
+                <p>ou R$ 150,00 à vista</p>
                 <br>
                 <a href="LINK_SUBSTITUTO" class="btn">QUERO ME INSCREVER AGORA</a>
                 
@@ -126,7 +126,6 @@ HTML_TEMPLATE = """
 
 @app.route('/')
 def home():
-    # Substituição cirúrgica que evita qualquer quebra no servidor
     html_renderizado = HTML_TEMPLATE.replace("LINK_SUBSTITUTO", LINK_DE_PAGAMENTO)
     return render_template_string(html_renderizado)
 
